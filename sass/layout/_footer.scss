@@ -1,0 +1,17 @@
+footer {
+  background-color: #353535;
+  padding-bottom: 30px;
+  & h1 {
+    color: $colour-white;
+    font-size: 2rem;
+    padding-left: 20px;
+  }
+  & a {
+    color: $colour-white;
+    padding-left: 20px;
+  }
+
+  & li {
+    padding-bottom: 10px;
+  }
+}

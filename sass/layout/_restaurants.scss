@@ -1,0 +1,78 @@
+.section__restaurants {
+  background-color: $colour-background-lightgrey;
+  display: grid;
+  align-items: center;
+
+  column-gap: 10px;
+  row-gap: 15px;
+  & .restautants {
+    justify-self: center;
+  }
+  & figure {
+    justify-self: center;
+    background-color: $colour-white;
+    border-radius: 20px;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 10px #c0bfbf;
+    & .pic__restaurant {
+      width: 100%;
+      border-radius: 20px 20px 0px 0px;
+      height: 60vw;
+      object-fit: cover;
+    }
+
+    & p {
+      color: $colour-font;
+      padding: 0px 0px 10px 10px;
+      font-weight: 100;
+    }
+    & h3 {
+      color: $colour-font;
+      padding: 10px 10px 0px 10px;
+    }
+    & .card__restau--new {
+      position: absolute;
+      right: 30px;
+      margin-top: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: $colour-tertiary;
+      color: #008766;
+    }
+  }
+}
+
+.cartes__restaurants__like {
+  position: absolute;
+  font-size: 25px;
+  width: 15%;
+  right: 30px;
+  margin-top: -40px;
+  .vide {
+    color: $colour-font;
+    font-weight: 100;
+  }
+  .vide:hover {
+    opacity: 0;
+  }
+  .plein {
+    opacity: 0;
+    @include fa-heart__plein;
+    margin-left: -25px;
+    position: absolute;
+  }
+  .plein:hover {
+    animation: heart 1s ease forwards;
+    -webkit-animation: heart 1s ease forwards;
+    @keyframes heart {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}

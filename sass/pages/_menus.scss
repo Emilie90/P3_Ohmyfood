@@ -1,0 +1,138 @@
+.pic__restaurant--menu {
+  width: 100%;
+}
+.menu__list {
+  & h3 {
+    margin-left: 10px;
+  }
+  & h4 {
+    font-size: 1.7rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width ease 0.7s;
+  }
+}
+.menus {
+  background-color: $colour-background-grey;
+  border-radius: 40px 40px 0px 0px;
+  margin-top: -50px;
+  padding: 0px 10px 0px 10px;
+  position: relative;
+  & h1 {
+    padding-top: 40px;
+    font-size: 2.5rem;
+  }
+  & .btn {
+    border: none;
+    width: 50%;
+    align-self: center;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.menu__food-card {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  background-color: $colour-background-lightgrey;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px #c2c1c1;
+  padding: 15px;
+
+  & p {
+    font-weight: 100;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width ease 0.7s;
+  }
+}
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  & h3 {
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 100;
+
+    & .underline--menu {
+      border-bottom: 3px solid $colour-tertiary;
+    }
+  }
+}
+.menu__food-price {
+  display: flex;
+  align-self: flex-end;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width ease 0.7s;
+}
+
+/*.menu__checkbox {
+  animation: apparition_menu 800ms both;
+  @keyframes apparition_menu {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}*/
+.menu__checkbox {
+  @include checkbox;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0px;
+  height: 75px;
+
+  transition: width ease 0.5s;
+  text-align: center;
+  padding-top: 27px;
+  overflow: hidden;
+
+  i {
+    @include menu__check--icon;
+  }
+}
+.menu__food-card:hover {
+  & .menu__checkbox {
+    width: 75px;
+  }
+}
+
+.menu__food-card:hover p {
+  width: calc(100% - 70px);
+}
+
+.menu__food-card:hover h4 {
+  width: calc(100% - 70px);
+}
+
+.menu__food-card:hover .menu__food-price {
+  width: calc(100% - 70px);
+}
+
+.menu__food-card i {
+  @include menu__check--icon;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  transition: transform ease 0.5s;
+}
+
+.menu__food-card:hover i {
+  @include menu__check--icon;
+  transform: rotate(360deg);
+}

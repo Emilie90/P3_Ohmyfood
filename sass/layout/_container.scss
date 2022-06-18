@@ -1,0 +1,39 @@
+.fonctionnement__selecteurs__action {
+  display: flex;
+  align-items: center;
+  & p {
+    font-weight: 700;
+  }
+}
+
+.fonctionnement__selecteurs__action {
+  background-color: $colour-background-lightgrey;
+  border-radius: 20px;
+  margin: 10px 30px 10px 30px;
+  padding: 20px;
+  box-shadow: 3px 3px 10px #c0bfbf;
+  &:hover {
+    background-color: $colour-accent;
+    cursor: pointer;
+    i {
+      color: $colour-primary;
+    }
+  }
+}
+
+.fa-list__icon {
+  font-size: 2rem;
+  color: grey;
+  padding: 0px 10px 0px 10px;
+  position: relative;
+  left: -15px;
+}
+
+.numerotation {
+  background-color: $colour-primary;
+  border-radius: 100px;
+  padding: 5px 10px 5px 10px;
+  color: $colour-white;
+  position: relative;
+  left: -30px;
+}

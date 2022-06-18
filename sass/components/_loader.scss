@@ -1,0 +1,77 @@
+.loader {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: $colour-background-lightgrey;
+  animation: loader 1s forwards;
+  animation-delay: 3s;
+  @keyframes loader {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.progress__bar {
+  width: 100%;
+  height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+  position: relative;
+  background: #f2f2f2;
+  border: 1px solid $colour-background-grey;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+  & h1 {
+    font-size: 2em;
+    opacity: 50%;
+  }
+
+  &__bar {
+    transform-origin: left;
+    transform: scaleX(0.5);
+    animation: progress-bar $prog-bar-dur $prog-bar-delay both;
+    background: linear-gradient(
+      90deg,
+      $colour-primary,
+      $colour-secondary,
+      $colour-tertiary
+    );
+  }
+}
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+    opacity: 0.1;
+  }
+  17% {
+    transform: scaleX(0.18);
+  }
+  24% {
+    transform: scaleX(0.4);
+    animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
+  }
+  46% {
+    transform: scaleX(0.81);
+  }
+  85%,
+  100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

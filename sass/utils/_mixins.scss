@@ -1,0 +1,57 @@
+@mixin fa-heart__plein {
+  background-image: linear-gradient($colour-primary, $colour-secondary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  border: none;
+  color: transparent;
+}
+@mixin progress__h1 {
+  background: linear-gradient(
+    90deg,
+    $colour-primary,
+    $colour-secondary,
+    $colour-tertiary
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  border: none;
+  color: transparent;
+}
+@mixin border($colour: $colour-primary) {
+  border-radius: 50px;
+  box-shadow: 3px 3px 10px #9c9c9c;
+}
+
+@mixin button_explorer {
+  display: block;
+  padding: $grid-gutter;
+  margin-top: 20px;
+
+  @include border;
+  border: none;
+  color: $colour-white;
+  background: linear-gradient(160deg, $colour-secondary, $colour-primary);
+
+  &:hover {
+    opacity: 80%;
+    box-shadow: 3px 3px 10px darken($color: #9c9c9c, $amount: 35%);
+  }
+  &--full-width {
+    width: 100%;
+  }
+}
+
+@mixin checkbox {
+  top: 0;
+  right: 0;
+  background-color: $colour-tertiary;
+
+  border-radius: 0px 20px 20px 0px;
+}
+@mixin menu__check--icon {
+  background-color: transparent;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
