@@ -12,6 +12,7 @@ html {
 
 body {
   box-sizing: border-box;
+  width: 100%;
 }
 
 body {
@@ -183,6 +184,27 @@ header p {
   font-size: 2.2rem;
 }
 
+#header_menu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#header_menu i {
+  position: absolute;
+  margin: -10px 0px 0px -50px;
+}
+
+.pic__restaurant--menu {
+  width: 100%;
+  margin: 0;
+  min-width: 360px;
+  height: 90%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
 .fonctionnement__selecteurs__action {
   display: flex;
   align-items: center;
@@ -321,10 +343,6 @@ footer li {
   padding-bottom: 10px;
 }
 
-.pic__restaurant--menu {
-  width: 100%;
-}
-
 .menu__list h3 {
   margin-left: 10px;
 }
@@ -342,6 +360,7 @@ footer li {
   margin-top: -50px;
   padding: 0px 10px 0px 10px;
   position: relative;
+  width: 100%;
 }
 .menus h1 {
   padding-top: 40px;
@@ -352,12 +371,13 @@ footer li {
   width: 50%;
   align-self: center;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .menu__food-card {
   position: relative;
-  width: 100%;
+  width: 98%;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -377,9 +397,13 @@ footer li {
 .menu__list {
   display: flex;
   flex-direction: column;
+  gap: 5px;
+}
+.menu__list ul {
+  padding-bottom: 10px;
 }
 .menu__list h3 {
-  padding-bottom: 10px;
+  padding: 10px 0px 5px 0px;
   text-transform: uppercase;
   font-weight: 100;
 }
@@ -390,83 +414,147 @@ footer li {
 .menu__food-price {
   display: flex;
   align-self: flex-end;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: width ease 0.7s;
 }
 
-/*.menu__checkbox {
-  animation: apparition_menu 800ms both;
-  @keyframes apparition_menu {
-    0% {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0px);
-      opacity: 1;
-    }
-  }
-}*/
 .menu__checkbox {
   top: 0;
   right: 0;
+  width: 60px;
+  height: 70px;
   background-color: #99e2d0;
   border-radius: 0px 20px 20px 0px;
   position: absolute;
   top: 0;
   right: 0;
   width: 0px;
-  height: 75px;
   transition: width ease 0.5s;
   text-align: center;
   padding-top: 27px;
   overflow: hidden;
 }
-.menu__checkbox i {
-  background-color: transparent;
-  color: white;
-  display: flex;
-  justify-content: center;
-  padding: 25px;
-}
 
 .menu__food-card:hover .menu__checkbox {
-  width: 75px;
+  width: 70px;
+  transition-duration: 0.5s;
 }
-
 .menu__food-card:hover p {
-  width: calc(100% - 70px);
+  transition-duration: 0.5s;
+  width: 80%;
 }
-
 .menu__food-card:hover h4 {
-  width: calc(100% - 70px);
+  transition-duration: 0.5s;
+  width: 80%;
 }
 
 .menu__food-card:hover .menu__food-price {
-  width: calc(100% - 70px);
+  margin-right: 70px;
+  transition-duration: 0.5s;
 }
 
-.menu__food-card i {
+.menu__food-card:hover i {
+  transition: transform 800ms;
+  transform: rotate(360deg);
+}
+
+.menu__list div i {
   background-color: transparent;
   color: white;
-  display: flex;
-  justify-content: center;
-  padding: 25px;
   width: 25px;
   height: 25px;
   display: inline-block;
   transition: transform ease 0.5s;
 }
 
-.menu__food-card:hover i {
-  background-color: transparent;
-  color: white;
+.menu__food-details {
   display: flex;
   justify-content: center;
-  padding: 25px;
-  transform: rotate(360deg);
+  align-items: flex-start;
+  flex-direction: column;
+  width: 98%;
+  transition-duration: 800ms;
+}
+.menu__food-details h4 {
+  margin: 0;
+  padding-right: 0;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 98%;
+}
+.menu__food-details p {
+  margin-top: 8px;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 98%;
+}
+
+.menu__food-price {
+  margin-top: 20px;
+  padding-right: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*Apparition menu*/
+.menu__food-list {
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+.menu_1 {
+  animation-delay: 60ms;
+}
+
+.menu_2 {
+  animation-delay: 180ms;
+}
+
+.menu_3 {
+  animation-delay: 240ms;
+}
+
+.menu_4 {
+  animation-delay: 300ms;
+}
+
+.menu_5 {
+  animation-delay: 360ms;
+}
+
+.menu_6 {
+  animation-delay: 420ms;
+}
+
+.menu_7 {
+  animation-delay: 480ms;
+}
+
+.menu_8 {
+  animation-delay: 540ms;
+}
+
+.menu_9 {
+  animation-delay: 600ms;
+}
+
+.menu_10 {
+  animation-delay: 660ms;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
