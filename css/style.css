@@ -343,17 +343,6 @@ footer li {
   padding-bottom: 10px;
 }
 
-.menu__list h3 {
-  margin-left: 10px;
-}
-.menu__list h4 {
-  font-size: 1.7rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: width ease 0.7s;
-}
-
 .menus {
   background-color: #eaeaea;
   border-radius: 40px 40px 0px 0px;
@@ -374,6 +363,24 @@ footer li {
   margin-bottom: 40px;
 }
 
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.menu__list ul {
+  padding-bottom: 10px;
+}
+.menu__list h3 {
+  margin-left: 10px;
+  padding: 10px 0px 5px 0px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.menu__list h3 .underline--menu {
+  border-bottom: 3px solid #99e2d0;
+}
+
 .menu__food-card {
   position: relative;
   width: 98%;
@@ -392,28 +399,34 @@ footer li {
   overflow: hidden;
   white-space: nowrap;
   transition: width ease 0.7s;
+  margin-top: 8px;
+  font-size: 15px;
+  width: 100%;
+}
+.menu__food-card h4 {
+  margin: 0;
+  padding-right: 0;
+  font-size: 1.7rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  transition: width ease 0.7s;
 }
 
-.menu__list {
+.menu__food-details {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
-  gap: 5px;
-}
-.menu__list ul {
-  padding-bottom: 10px;
-}
-.menu__list h3 {
-  padding: 10px 0px 5px 0px;
-  text-transform: uppercase;
-  font-weight: 100;
-}
-.menu__list h3 .underline--menu {
-  border-bottom: 3px solid #99e2d0;
+  transition-duration: 800ms;
 }
 
 .menu__food-price {
+  margin-top: 20px;
+  padding-right: 16px;
   display: flex;
-  align-self: flex-end;
+  justify-content: flex-end;
 }
 
 .menu__checkbox {
@@ -433,17 +446,21 @@ footer li {
   overflow: hidden;
 }
 
+.menu__food-card:hover .menu__food-details {
+  width: 70%;
+  transition-duration: 0.5s;
+}
 .menu__food-card:hover .menu__checkbox {
   width: 70px;
   transition-duration: 0.5s;
 }
 .menu__food-card:hover p {
+  width: 70%;
   transition-duration: 0.5s;
-  width: 80%;
 }
 .menu__food-card:hover h4 {
+  width: 70%;
   transition-duration: 0.5s;
-  width: 80%;
 }
 
 .menu__food-card:hover .menu__food-price {
@@ -463,39 +480,6 @@ footer li {
   height: 25px;
   display: inline-block;
   transition: transform ease 0.5s;
-}
-
-.menu__food-details {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  width: 98%;
-  transition-duration: 800ms;
-}
-.menu__food-details h4 {
-  margin: 0;
-  padding-right: 0;
-  font-size: 16px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 98%;
-}
-.menu__food-details p {
-  margin-top: 8px;
-  font-size: 15px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 98%;
-}
-
-.menu__food-price {
-  margin-top: 20px;
-  padding-right: 16px;
-  display: flex;
-  justify-content: flex-end;
 }
 
 /*Apparition menu*/
