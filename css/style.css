@@ -162,7 +162,8 @@ header #localisation__searchbox {
   font-weight: 900;
   color: #353535;
 }
-header section.explorer__restaurants {
+
+section.explorer__restaurants {
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
@@ -171,10 +172,10 @@ header section.explorer__restaurants {
   align-items: center;
   align-self: center;
 }
-header section.explorer__restaurants .button_explorer {
+section.explorer__restaurants .button_explorer {
   align-items: center;
 }
-header p {
+section.explorer__restaurants p {
   font-weight: 100;
   font-size: 1.7rem;
 }
@@ -203,6 +204,17 @@ header p {
   height: 90%;
   max-height: 300px;
   object-fit: cover;
+}
+
+.top_desktop {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 780px) {
+  .top_desktop {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .fonctionnement__selecteurs__action {
