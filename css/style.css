@@ -13,6 +13,7 @@ html {
 body {
   box-sizing: border-box;
   width: 100%;
+  margin: auto;
 }
 
 body {
@@ -212,8 +213,32 @@ section.explorer__restaurants p {
 }
 @media screen and (min-width: 780px) {
   .top_desktop {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+section.explorer__restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 10px 20px 20px 20px;
+  align-items: center;
+  align-self: center;
+}
+section.explorer__restaurants .button_explorer {
+  align-items: center;
+}
+section.explorer__restaurants p {
+  font-weight: 100;
+  font-size: 1.7rem;
+}
+@media screen and (min-width: 780px) {
+  section.explorer__restaurants {
+    width: 100%;
+    justify-self: center;
+    align-self: stretch;
   }
 }
 
@@ -239,7 +264,6 @@ section.explorer__restaurants p {
 .fonctionnement__selecteurs__action:hover i {
   color: #9356dc;
 }
-
 .fa-list__icon {
   font-size: 2rem;
   color: grey;
@@ -267,6 +291,17 @@ section.explorer__restaurants p {
 .section__restaurants .restautants {
   justify-self: center;
 }
+@media screen and (min-width: 780px) {
+  .section__restaurants .restautants {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+    column-gap: 40px;
+    row-gap: 20px;
+  }
+}
 .section__restaurants figure {
   justify-self: center;
   background-color: #fff;
@@ -276,11 +311,21 @@ section.explorer__restaurants p {
   margin-bottom: 20px;
   box-shadow: 3px 3px 10px #c0bfbf;
 }
+@media screen and (min-width: 780px) {
+  .section__restaurants figure {
+    padding-bottom: 20px;
+  }
+}
 .section__restaurants figure .pic__restaurant {
   width: 100%;
   border-radius: 20px 20px 0px 0px;
   height: 60vw;
   object-fit: cover;
+}
+@media screen and (min-width: 780px) {
+  .section__restaurants figure .pic__restaurant {
+    height: 30vw;
+  }
 }
 .section__restaurants figure p {
   color: #000;
@@ -300,6 +345,18 @@ section.explorer__restaurants p {
   background-color: #99e2d0;
   color: #008766;
 }
+@media screen and (min-width: 769px) {
+  .section__restaurants figure .card__restau--new {
+    position: absolute;
+    right: auto;
+    margin-left: 30%;
+  }
+}
+@media screen and (min-width: 780px) {
+  .section__restaurants {
+    background-color: #eaeaea;
+  }
+}
 
 .cartes__restaurants__like {
   position: absolute;
@@ -307,6 +364,13 @@ section.explorer__restaurants p {
   width: 15%;
   right: 30px;
   margin-top: -40px;
+}
+@media screen and (min-width: 780px) {
+  .cartes__restaurants__like {
+    position: absolute;
+    right: auto;
+    margin-left: 33%;
+  }
 }
 .cartes__restaurants__like .vide {
   color: #000;
