@@ -5,8 +5,18 @@
 
   column-gap: 10px;
   row-gap: 15px;
+
   & .restautants {
     justify-self: center;
+    @media screen and(min-width:780px) {
+      display: grid;
+      grid-template-columns: 40% 40%;
+      justify-content: center;
+      justify-items: stretch;
+      align-items: stretch;
+      column-gap: 40px;
+      row-gap: 20px;
+    }
   }
   & figure {
     justify-self: center;
@@ -16,11 +26,17 @@
     padding: 0;
     margin-bottom: 20px;
     box-shadow: 3px 3px 10px #c0bfbf;
+    @media screen and(min-width:780px) {
+      padding-bottom: 20px;
+    }
     & .pic__restaurant {
       width: 100%;
       border-radius: 20px 20px 0px 0px;
       height: 60vw;
       object-fit: cover;
+      @media screen and(min-width:780px) {
+        height: 30vw;
+      }
     }
 
     & p {
@@ -40,7 +56,15 @@
       border-radius: 5px;
       background-color: $colour-tertiary;
       color: #008766;
+      @media screen and(min-width:769px) {
+        position: absolute;
+        right: auto;
+        margin-left: 30%;
+      }
     }
+  }
+  @media screen and(min-width:780px) {
+    background-color: $colour-background-grey;
   }
 }
 
@@ -50,6 +74,11 @@
   width: 15%;
   right: 30px;
   margin-top: -40px;
+  @media screen and(min-width:780px) {
+    position: absolute;
+    right: auto;
+    margin-left: 33%;
+  }
   .vide {
     color: $colour-font;
     font-weight: 100;
