@@ -238,8 +238,8 @@ section.explorer__restaurants p {
 @media screen and (min-width: 992px) {
   section.explorer__restaurants {
     width: 100%;
-    justify-self: center;
-    align-self: stretch;
+    height: 100%;
+    padding-top: 7%;
   }
 }
 
@@ -289,13 +289,19 @@ section.explorer__restaurants p {
   column-gap: 10px;
   row-gap: 15px;
 }
+@media screen and (min-width: 992px) {
+  .section__restaurants h2 {
+    font-size: 3rem;
+    padding-left: 10%;
+  }
+}
 .section__restaurants .restautants {
   justify-self: center;
 }
 @media screen and (min-width: 992px) {
   .section__restaurants .restautants {
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 45% 45%;
     justify-content: center;
     justify-items: stretch;
     align-items: stretch;
@@ -339,7 +345,7 @@ section.explorer__restaurants p {
 }
 .section__restaurants figure .card__restau--new {
   position: absolute;
-  right: 30px;
+  right: 10%;
   margin-top: 10px;
   padding: 5px;
   border-radius: 5px;
@@ -350,7 +356,7 @@ section.explorer__restaurants p {
   .section__restaurants figure .card__restau--new {
     position: absolute;
     right: auto;
-    margin-left: 30%;
+    margin-left: 35%;
   }
 }
 @media screen and (min-width: 992px) {
@@ -370,7 +376,7 @@ section.explorer__restaurants p {
   .cartes__restaurants__like {
     position: absolute;
     right: auto;
-    margin-left: 33%;
+    margin-left: 37%;
   }
 }
 .cartes__restaurants__like .vide {
@@ -548,6 +554,9 @@ footer li {
   overflow: hidden;
 }
 
+.menu__food-card:hover {
+  cursor: pointer;
+}
 .menu__food-card:hover .menu__food-details {
   width: 70%;
   transition-duration: 0.5s;
