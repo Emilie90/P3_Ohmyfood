@@ -5,10 +5,17 @@
   padding: 0px 10px 0px 10px;
   position: relative;
   width: 100%;
+
   & h1 {
     padding-top: 40px;
     font-size: 2.5rem;
+    @media screen and(min-width:992px) {
+      text-align: center;
+      margin-left: -15%;
+      font-size: 3rem;
+    }
   }
+
   & .btn {
     border: none;
     width: 50%;
@@ -16,13 +23,22 @@
     text-align: center;
     margin-bottom: 40px;
   }
+  & .cartes__restaurants__like {
+    @media screen and(min-width:992PX) {
+      position: absolute;
+      right: 20%;
+    }
+  }
 }
 
 .menu__list {
   display: flex;
   flex-direction: column;
   gap: 5px;
-
+  @media screen and(min-width:992px) {
+    width: 40%;
+    margin: 0 auto;
+  }
   & ul {
     padding-bottom: 10px;
   }
@@ -45,7 +61,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-
   background-color: $colour-background-lightgrey;
   border-radius: 20px;
   box-shadow: 3px 3px 10px #c2c1c1;
@@ -59,7 +74,10 @@
     transition: width ease 0.7s;
     margin-top: 8px;
     font-size: 15px;
-    width: 100%;
+    width: 98%;
+    @media screen and(min-width:992px) {
+      width: 100%;
+    }
   }
 
   & h4 {
@@ -69,7 +87,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 100%;
+    width: 98%;
     transition: width ease 0.7s;
   }
 }
@@ -80,6 +98,7 @@
   align-items: flex-start;
   flex-direction: column;
   transition-duration: 800ms;
+  width: 100%;
 }
 
 .menu__food-price {
@@ -109,6 +128,7 @@
     width: 70px;
     transition-duration: 0.5s;
   }
+
   & p {
     width: 70%;
     transition-duration: 0.5s;
@@ -118,6 +138,7 @@
     transition-duration: 0.5s;
   }
 }
+
 .menu__food-card:hover .menu__food-price {
   margin-right: 70px;
   transition-duration: 0.5s;

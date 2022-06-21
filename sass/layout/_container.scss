@@ -1,7 +1,7 @@
 .top_desktop {
   display: flex;
   flex-direction: column;
-  @media screen and(min-width:780px) {
+  @media screen and(min-width:992px) {
     display: grid;
     grid-template-columns: 50% 50%;
   }
@@ -9,6 +9,7 @@
 
 section.explorer__restaurants {
   display: flex;
+  width: 100%;
   flex-direction: column;
   background-color: $colour-background-lightgrey;
   text-align: center;
@@ -24,7 +25,7 @@ section.explorer__restaurants {
     font-size: 1.7rem;
   }
 
-  @media screen and(min-width:780px) {
+  @media screen and(min-width:992px) {
     width: 100%;
     justify-self: center;
     align-self: stretch;
@@ -53,7 +54,7 @@ section.explorer__restaurants {
       color: $colour-primary;
     }
   }
-  @media screen and(min-width:780px) {
+  @media screen and(min-width:992px) {
   }
 }
 
