@@ -9,7 +9,7 @@
   align-items: center;
   background-color: $colour-background-lightgrey;
   animation: loader 1s forwards;
-  animation-delay: 3s;
+  animation-delay: 2s;
   @keyframes loader {
     0% {
       opacity: 1;
