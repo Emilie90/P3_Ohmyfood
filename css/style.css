@@ -358,7 +358,6 @@ section.explorer__restaurants p {
   .cartes__restaurants__like {
     position: absolute;
     right: auto;
-    margin-left: 37%;
   }
 }
 .cartes__restaurants__like .vide {
@@ -375,7 +374,6 @@ section.explorer__restaurants p {
   -webkit-background-clip: text;
   border: none;
   color: transparent;
-  margin-left: -25px;
   position: absolute;
 }
 .cartes__restaurants__like .plein:hover {
