@@ -339,7 +339,6 @@ section.explorer__restaurants p {
   .section__restaurants figure .card__restau--new {
     position: absolute;
     right: auto;
-    margin-left: 35%;
   }
 }
 @media screen and (min-width: 992px) {
