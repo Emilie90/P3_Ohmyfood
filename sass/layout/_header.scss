@@ -32,13 +32,15 @@ header {
   align-items: center;
   & i {
     position: absolute;
-    margin: -10px 0px 0px -50px;
+    margin: -2% 0px 0px -10%;
+    @media screen and(min-width:992px) {
+      margin: -1% 0px 0px -10%;
+    }
   }
 }
 .pic__restaurant--menu {
   width: 100%;
   margin: 0;
-  min-width: 360px;
   height: 90%;
   max-height: 300px;
   object-fit: cover;

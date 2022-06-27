@@ -179,13 +179,17 @@ header #localisation__searchbox {
 }
 #header_menu i {
   position: absolute;
-  margin: -10px 0px 0px -50px;
+  margin: -2% 0px 0px -10%;
+}
+@media screen and (min-width: 992px) {
+  #header_menu i {
+    margin: -1% 0px 0px -10%;
+  }
 }
 
 .pic__restaurant--menu {
   width: 100%;
   margin: 0;
-  min-width: 360px;
   height: 90%;
   max-height: 300px;
   object-fit: cover;
@@ -507,7 +511,7 @@ footer li {
   overflow: hidden;
   white-space: nowrap;
   width: 98%;
-  transition: width ease 0.7s;
+  transition: width ease 700s;
 }
 
 .menu__food-details {
@@ -516,7 +520,7 @@ footer li {
   align-items: flex-start;
   flex-direction: column;
   transition-duration: 800ms;
-  width: 100%;
+  width: 98%;
 }
 
 .menu__food-price {
