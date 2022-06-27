@@ -66,7 +66,6 @@
       @media screen and(min-width:992px) {
         position: absolute;
         right: auto;
-        margin-left: 35%;
       }
     }
   }
@@ -84,7 +83,6 @@
   @media screen and(min-width:992px) {
     position: absolute;
     right: auto;
-    margin-left: 37%;
   }
   .vide {
     color: $colour-font;
@@ -96,7 +94,7 @@
   .plein {
     opacity: 0;
     @include fa-heart__plein;
-    margin-left: -25px;
+
     position: absolute;
   }
   .plein:hover {
