@@ -95,6 +95,7 @@ a {
   }
   100% {
     opacity: 0;
+    visibility: hidden;
     display: none;
   }
 }
@@ -213,6 +214,7 @@ section.explorer__restaurants {
 }
 section.explorer__restaurants .button_explorer {
   align-items: center;
+  cursor: pointer;
 }
 section.explorer__restaurants p {
   font-weight: 100;
@@ -339,6 +341,7 @@ section.explorer__restaurants p {
   .section__restaurants figure .card__restau--new {
     position: absolute;
     right: auto;
+    margin-left: 35%;
   }
 }
 @media screen and (min-width: 992px) {
@@ -353,11 +356,13 @@ section.explorer__restaurants p {
   width: 15%;
   right: 30px;
   margin-top: -40px;
+  cursor: pointer;
 }
 @media screen and (min-width: 992px) {
   .cartes__restaurants__like {
-    position: absolute;
+    position: relative;
     right: auto;
+    margin-left: 90%;
   }
 }
 .cartes__restaurants__like .vide {
@@ -374,6 +379,7 @@ section.explorer__restaurants p {
   -webkit-background-clip: text;
   border: none;
   color: transparent;
+  margin-left: -25px;
   position: absolute;
 }
 .cartes__restaurants__like .plein:hover {
