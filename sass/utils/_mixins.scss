@@ -5,18 +5,7 @@
   border: none;
   color: transparent;
 }
-@mixin progress__h1 {
-  background: linear-gradient(
-    90deg,
-    $colour-primary,
-    $colour-secondary,
-    $colour-tertiary
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  border: none;
-  color: transparent;
-}
+
 @mixin border($colour: $colour-primary) {
   border-radius: 50px;
   box-shadow: 3px 3px 10px #9c9c9c;
